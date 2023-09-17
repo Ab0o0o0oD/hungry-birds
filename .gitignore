@@ -1,0 +1,16 @@
+
+.eslintcache
+temp/
+target/
+*~
+*.iml
+.idea
+atlassian-ide-plugin.xml
+*.log
+logs/
+.DS_Store
+
+.project
+**/.project
+.settings
+**/.settings

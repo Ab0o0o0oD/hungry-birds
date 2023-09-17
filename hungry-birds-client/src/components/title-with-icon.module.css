@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 24px 0;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.title {
+  margin: 0;
+}
