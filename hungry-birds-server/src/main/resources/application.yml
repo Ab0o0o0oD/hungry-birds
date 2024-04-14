@@ -1,0 +1,13 @@
+#Encryption https://medium.com/javarevisited/how-to-encrypt-secrets-in-an-spring-boot-application-57a60c8abaa7 aSF2Adf4VaWrerTRfASLaSF2Adf4VaWrerTRfASL
+jasypt:
+  encryptor:
+    password: ${JASYPT_ENCRYPTOR_PASSWORD:}
+
+
+vipps:
+  url: 'https://apitest.vipps.no'
+  token-uri: 'https://apitest.vipps.no/accessToken/get'
+  client-id: 'ENC(9+lQt2DajlpwDtZRXNcrNf96i9DjldIsKqJF+R5rFUBTrnlbUZt7d0gbATJn+HOm+7/5QTB/XVm8ZEZpFCXVq4m+bhym/e0V5hVx15TOV1c=)'
+  client-secret: 'ENC(l9J87lZhTMtg8TqtnRjn9Pfk9pp56fx5p4au/sp88GFkUdBmUuZ9Ju9vii98n0jb64xApJF/cP/5gckpmRJ0tvsrwKx99pd1Ol3VAHKTKjM=)'
+  subscription-key: 'ENC(R8D7KSKGHKLs3wANmi/I8rvPPBzlK1UPWFXjaD0OgOeJYY0gCOTcfCHd/Vt56CMS07tQh/szJiZySzLQxLLEkttyd3/WRmpnwFvUZUlsxK0=)'
+  msn: 'ENC(TmD/RZhmq8Na1kjGtS8vcA6Mt6F9L8Hzfv4U78E9BMzkqt92fzK1HlZOqYtMpKID)'

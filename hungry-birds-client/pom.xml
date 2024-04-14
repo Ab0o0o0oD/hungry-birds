@@ -6,9 +6,55 @@
         <groupId>com.restaurant</groupId>
         <artifactId>hungry-birds</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>hungry-birds-client</artifactId>
 
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>exec-npm-install</id>
+                    <phase>generate-sources</phase>
+                    <configuration>
+                        <executable>npm</executable>
+                        <arguments>
+                            <argument>ci</argument>
+                        </arguments>
+                    </configuration>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>exec-npm-package</id>
+                    <phase>generate-sources</phase>
+                    <configuration>
+                        <executable>npm</executable>
+                        <arguments>
+                            <argument>run</argument>
+                            <argument>build</argument>
+                        </arguments>
+                    </configuration>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <artifactId>maven-clean-plugin</artifactId>
+            <configuration>
+                <filesets>
+                    <fileset>
+                        <directory>dist</directory>
+                    </fileset>
+                </filesets>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 </project>
