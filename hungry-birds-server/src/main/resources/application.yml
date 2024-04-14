@@ -1,0 +1,8 @@
+
+vipps:
+  url: 'https://apitest.vipps.no'
+  token-uri: 'https://apitest.vipps.no/accessToken/get'
+  client-id: 'ec86fb34-e43f-46cd-8de3-857f8a351624'
+  client-secret: '-Go8Q~NAedREC1xdC3Xsor6pCCR7aHuAtABN.dvM'
+  subscription-key: '9803808507f54d5e940b216bdaa18b91'
+  msn: '311928'

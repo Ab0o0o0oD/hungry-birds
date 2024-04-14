@@ -77,6 +77,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   label={`${clock ? '' : 'Hente tid'}`}
                   disablePast={true}
                   closeOnSelect={true}
+
                   className={`${
                     clock === null
                       ? styles.timePickerBtn
