@@ -6,7 +6,6 @@
 		<groupId>com.restaurant</groupId>
 		<artifactId>hungry-birds</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 
@@ -79,6 +78,11 @@
 						<version>${kotlin.version}</version>
 					</dependency>
 				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>com.github.ulisesbocchio</groupId>
+				<artifactId>jasypt-maven-plugin</artifactId>
+				<version>${jasypt.version}</version>
 			</plugin>
 		</plugins>
 	</build>
