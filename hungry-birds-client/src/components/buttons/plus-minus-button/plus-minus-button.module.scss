@@ -1,0 +1,27 @@
+@import '@/styles/includes.scss';
+
+.minusButton,
+.plusButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $fs-2xl;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10%;
+  width: 35px;
+  height: 35px;
+  color: $btn-primary-text-color;
+  background-color: $btn-primary;
+  border: none;
+}
+
+.plusMinusButton {
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  margin: 0 $sp-m;
+  font-weight: bold;
+}

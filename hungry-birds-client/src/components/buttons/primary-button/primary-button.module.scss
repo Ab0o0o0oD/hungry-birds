@@ -1,0 +1,47 @@
+@import '@/styles/includes.scss';
+.btnWrapper {
+  justify-self: start;
+  align-self: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .btnWrapper {
+    justify-self: end;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: $sp-s $sp-m;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: scale(1.05) translateY(3px);
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 768px) {
+  .btn:hover {
+    transform: unset;
+    transition: unset;
+  }
+
+  .btn:active {
+    transform: scale(1.05) translateY(3px);
+    transition: 0.4s;
+  }
+}
+
+.primary {
+  background: $btn-primary;
+  border: $btn-primary;
+  color: $color-a-100;
+}
+
+.secondary {
+  background: $btn-secondary;
+  border: $btn-secondary;;
+  color: $btn-secondary-text-color;
+}

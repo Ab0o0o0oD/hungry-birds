@@ -1,0 +1,63 @@
+@import '@/styles/includes.scss';
+
+.cartContainer {
+  background-color: $color-c-100;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: $sp-s;
+  margin: $sp-m 0 0 $sp-m;
+  position: relative;
+}
+
+.cartImg {
+  margin: 20% auto 5% 0; //TODO dont use % for spacing
+  display: block;
+  width: 80%;
+}
+
+.emptyCartWrapper {
+  text-align: center;
+}
+
+.cartItemsHeader {
+}
+
+.cartItemsWrapper {
+  overflow-y: auto;
+  flex: 1 1 auto;
+  height: 500px;
+  margin-bottom: $sp-2xl;
+}
+.cartItemsWrapper:last-child {
+  margin-bottom: $sp-xl;
+}
+
+/* width */
+.cartItemsWrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.cartItemsWrapper::-webkit-scrollbar-track {
+  background: $color-a-75;
+}
+
+/* Handle */
+.cartItemsWrapper::-webkit-scrollbar-thumb {
+  background: $color-c-75;
+}
+
+/* Handle on hover */
+.cartItemsWrapper::-webkit-scrollbar-thumb:hover {
+  background-color: $color-c-75;
+}
+
+.toPaymentBtnLg {
+  position: absolute;
+  bottom: $sp-s;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90%;
+}
