@@ -1,0 +1,132 @@
+// media queries
+@mixin xs {
+    @media only screen and (max-width: ($bp-xs - 1)) {
+        @content;
+    }
+}
+@mixin xs-up {
+    @media only screen and (min-width: ($bp-xs)) {
+        @content;
+    }
+}
+@mixin sm {
+    @media only screen and (max-width: ($bp-sm - 1)) {
+        @content;
+    }
+}
+@mixin sm-up {
+    @media only screen and (min-width: $bp-sm) {
+        @content;
+    }
+}
+@mixin md-down {
+    @media only screen and (max-width: ($bp-md - 1)) {
+        @content;
+    }
+}
+@mixin md {
+    @media only screen and (min-width: $bp-md) {
+        @content;
+    }
+}
+@mixin lg-down {
+    @media only screen and (max-width: ($bp-lg - 1)) {
+        @content;
+    }
+}
+@mixin lg {
+    @media only screen and (min-width: $bp-lg) {
+        @content;
+    }
+}
+@mixin xl {
+    @media only screen and (min-width: $bp-xl) {
+        @content;
+    }
+}
+
+// font weight and style
+@mixin ff($weight, $style: normal) {
+    font-weight: normal;
+
+    @if $weight == normal {
+        font-family: $font-regular;
+
+        @if $style == italic {
+            font-family: $font-regular-italic;
+        }
+    }
+
+    @if $weight == bold {
+        font-family: $font-bold;
+
+        @if $style == italic {
+            font-family: $font-bold-italic;
+        }
+    }
+
+    @if $weight == light {
+        font-family: $font-light;
+
+        @if $style == italic {
+            font-family: $font-thin-italic;
+        }
+    }
+}
+
+// min/max font sizing
+@mixin fs($min, $max) {
+    @media only screen and (max-width: ($bp-md - 1)) {
+        font-size: $min;
+    }
+
+    @media only screen and (min-width: $bp-md) {
+        font-size: $max;
+    }
+}
+
+// truncate by n lines of text
+@mixin line-clamp($lines) {
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+// screen reader only, visually hidden
+@mixin sr() {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+// styled scrollbars
+@mixin scrollbars(
+    $size: 8px,
+    $thickness: thin,
+    $foreground-color: $c-gray50,
+    $background-color: $c-gray20,
+    $border-radius: 4px
+) {
+    // Chrome & Safari
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+        border-radius: $border-radius;
+    }
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+        border-radius: $border-radius;
+    }
+
+    // Firefox
+    scrollbar-width: $thickness;
+    scrollbar-color: $foreground-color $background-color;
+}

@@ -1,0 +1,78 @@
+// Colors
+$h-blue: #002664;
+$h-green: #3d9b35;
+$h-frost: #64a0c8;
+$h-frost-dark: #3b7aa5;
+$h-frost-darker: #2d5e7f;
+$h-frost80: #83b3d3;
+$h-frost30: #d0e2ee;
+$h-frost25: #d8e7f1;
+$h-frost15: #E8F1F7;
+$h-frost10: #eff5f9;
+$h-sea: #5bbbb7;
+$h-sea15: #e7f5f4;
+$h-sea30: #CDEAE9;
+$h-sea80: #7cc9c5;
+$h-forest: #578575;
+$h-sand: #ede2cb;
+$h-sand30: #f9f6ef;
+$h-gray190: #201F1E;
+$h-gray160: #323130;
+$h-gray150: #3B3A39;
+$h-gray130: #605E5C;
+$h-gray110: #8A8886;
+$h-gray60: #c8c6c4;
+$h-gray50: #d2d0ce;
+$h-gray40: #E1DFDD;
+$h-gray20: #F3F2F1;
+$h-gray10: #faf9f8;
+$h-gray-error: #f7f7f7;
+$h-links: #0063ff; //#0061FD
+$h-card-link: #002e78;
+$h-approved: #6bb700;
+$h-override: #fcd116;
+$h-info: #edebe9;
+$h-info-icon: #605e5c;
+$h-warning: #eb0716;
+$h-warning-severe: #fed9cc;
+$h-warning-severe-bg: #fcf2f3;
+$h-warning-severe-bg-hover: #fce3e6;
+$h-warning-severe-icon: #d83b01;
+$h-error: #fde7e9;
+$h-error-icon: #4e0000; //#a80000 - low contrast with $c-error
+$h-success: #dff6dd;
+$h-success-icon: #003800; //#107c10 - low contrast with $c-success
+$h-apotek1-neutral: #f5f5f6;
+$h-orangered: orangered;
+$h-oranged-10: rgb(255 168 108);
+$h-sea15-links: #002e78;
+$h-white: white;
+$h-white-75: #f1f1f1;
+$h-black: black;
+
+// white
+$color-a-100: $h-white;
+$color-a-75: $h-white-75;
+// warning
+$color-b-100: $h-warning;
+
+// gray
+$color-c-100: $h-gray130;
+$color-c-75: $h-gray60;
+$color-c-50: $h-gray50;
+$color-c-10: $h-gray10;
+
+$color-d-100: $h-orangered;
+$color-d-10: $h-oranged-10;
+
+$color-e-100: $h-black;
+
+// button
+$btn-primary-text-color: $color-b-100;
+$btn-primary: $color-d-100;
+
+$btn-secondary: $color-c-100;
+$btn-secondary-text-color: $color-a-100;
+
+// paragraph
+$text-primary-color: $color-a-100;
