@@ -1,4 +1,6 @@
-import { CartItem, Product } from '../types';
+import { CartItem } from "../type/cartItem";
+import { Product } from "../type/product";
+
 
 export const addToCart = (
   cartItems: CartItem[],
@@ -26,12 +28,12 @@ export const incrementItem = (
   return cartItems?.map((cartItem: CartItem) =>
     cartItem.product.id === product.id
       ? {
-          ...cartItem,
-          ...{
-            product: product,
-            quantity: cartItem.quantity + 1,
-          },
-        }
+        ...cartItem,
+        ...{
+          product: product,
+          quantity: cartItem.quantity + 1,
+        },
+      }
       : cartItem,
   );
 };

@@ -1,7 +1,7 @@
 import { BsBasket } from 'react-icons/bs';
 import React from 'react';
-import styles from './checkout-button.module.css';
-import { useItem } from '../state/ItemContext';
+import styles from './checkout-button.module.scss';
+import { useItem } from '../../../state/ItemContext';
 
 interface CheckoutButtonProps {
   onClick: () => void;

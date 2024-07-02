@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import ReactModal from 'react-modal';
-import { useItem } from '../state/ItemContext';
-import styles from './checkout-modal.module.css';
+import { useItem } from '../../state/ItemContext';
+import styles from './checkout-modal.module.scss';
 import { AiOutlineClose } from 'react-icons/ai';
-import { CartItemComponent } from '../components/CartItem';
+import { CartItemComponent } from '../card-item/CartItem';
 import { RxLapTimer } from 'react-icons/rx';
 import { renderTimeViewClock, TimePicker } from '@mui/x-date-pickers';
 import { TfiCommentsSmiley } from 'react-icons/tfi';
 import { TextField } from '@mui/material';
-import { TitleWithIcon } from '../components/TitleWithIcon';
+import { TitleWithIcon } from '../title-with-icon/TitleWithIcon';
 
 interface CheckoutModalProps {
   isOpenCheckoutModal: boolean;
@@ -21,7 +21,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 }: CheckoutModalProps) => {
   const { state } = useItem();
   const customStyle = {
-    content: { color: 'black', padding: '0' },
+    content: { color: 'black', padding: '0'},
   };
   const [clock, setClock] = useState<Date | null>(null);
 
@@ -32,6 +32,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
       contentLabel="Checkout modal"
       style={customStyle}
       bodyOpenClassName={styles.checkoutModalContainer}
+      className={styles.checkoutCustomStyle}
       ariaHideApp={false}
       shouldCloseOnOverlayClick={true}
     >

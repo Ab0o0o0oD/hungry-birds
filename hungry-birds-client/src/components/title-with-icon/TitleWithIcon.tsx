@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import styles from './title-with-icon.module.css';
+import styles from './title-with-icon.module.scss';
 
 interface TitleWithIconProps {
   title: string;

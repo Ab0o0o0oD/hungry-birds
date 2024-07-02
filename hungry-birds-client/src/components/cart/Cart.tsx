@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { CartItem } from '../types';
-import { CartItemComponent } from '../components/CartItem';
-import styles from './cart.module.css';
-import { useItem } from '../state/ItemContext';
-import { CheckoutButton } from '../components/CheckoutButton';
-import { CheckoutModal } from './CheckoutModal';
+import { CartItemComponent } from '../card-item/CartItem';
+import styles from './cart.module.scss';
+import { useItem } from '../../state/ItemContext';
+import { CheckoutButton } from '../buttons/checkout/CheckoutButton';
+import { CheckoutModal } from '../checkout-modal/CheckoutModal';
+import { CartItem } from '../../type/cartItem';
 interface CartItemProps {
   cartItems: CartItem[];
 }

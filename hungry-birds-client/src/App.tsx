@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import { MainPage } from './container/MainPage';
+import '@/styles/App.scss';
+import { MainPage } from './pages/MainPage';
 import { ItemProvider } from './state/ItemContext';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';

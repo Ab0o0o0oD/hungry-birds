@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './meny-card.module.css';
-import { PrimaryButton } from './PrimaryButton';
-import { PlusMinusButton } from './PlusMinusButton';
-import { Product } from '../types';
-import { useItem } from '../state/ItemContext';
+import styles from './meny-card.module.scss';
+import { PrimaryButton } from '../buttons/primary-button/PrimaryButton';
+import { PlusMinusButton } from '../buttons/plus-minus-button/PlusMinusButton';
+import { useItem } from '../../state/ItemContext';
+import { Product } from '../../type/product';
 
 interface MenyCardProps {
   product: Product;

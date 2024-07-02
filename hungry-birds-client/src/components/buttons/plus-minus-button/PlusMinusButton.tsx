@@ -1,7 +1,8 @@
 import React from 'react';
-import { CartItem, Product } from '../types';
-import styles from './plus-minus-button.module.css';
-import { useItem } from '../state/ItemContext';
+import styles from './plus-minus-button.module.scss';
+import { useItem } from '../../../state/ItemContext';
+import { Product } from '../../../type/product';
+import { CartItem } from '../../../type/cartItem';
 
 interface PlusMinusButtonProps {
   product: Product;
