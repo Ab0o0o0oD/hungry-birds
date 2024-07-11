@@ -54,7 +54,6 @@
   display: flex;
   flex-direction: column;
   max-width: 400px;
-  margin: 0 auto;
 }
 
 .checkoutCustomStyle {
@@ -103,12 +102,8 @@
   margin-right: 16px;
   background: $color-d-10;
   font-weight: 500;
-  flex: 0 0 1;
 }
 
-.timePickerBtn {
-  flex: 0 0 1;
-}
 
 .timePickerBtnSelected {
   background: $color-d-10;
