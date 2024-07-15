@@ -14,6 +14,8 @@
   color: $btn-primary-text-color;
   background-color: $btn-primary;
   border: none;
+  color: $color-a-100;
+  @include ff(bold);
 }
 
 .plusMinusButton {
@@ -23,5 +25,5 @@
 
 .quantity {
   margin: 0 $sp-m;
-  font-weight: bold;
+  @include ff(bold);
 }
