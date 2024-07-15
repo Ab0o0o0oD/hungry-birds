@@ -1,28 +1,30 @@
 @import '@/styles/includes';
 
 .menyCard {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: 1.6fr 1fr;
   grid-template-rows: 60% 40%;
   column-gap: 1rem;
   border-top: 2px solid #ffdbdb;
   grid-template-areas:
     'info  image'
-    'info  button';
-  padding: 13px;
-  justify-content: unset;
+    'info  image';
+  padding: 1em;
+  justify-content: center;
+
+  
 }
 
 @media only screen and (min-width: 768px) {
   .menyCard {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 33% 33% 34%;
+    grid-template-rows: 33% 67%;
     grid-template-areas:
       'info info info info image image'
-      'info info info info image image'
-      'button button . . image image';
-    padding: 13px 13px 0 13px;
-    border-top: 2px solid #ffdbdb;
+      'info info info info image image';
+    border-top: 1px solid #ffdbdb;
+    padding: 1em 2em;
+    transition: all 0.2s ease-in-out 0s;
   }
 }
 
@@ -32,38 +34,39 @@
 }
 
 .productImg {
-  max-height: 100% !important;
   max-width: 100%;
   float: right;
   object-fit: cover;
   border-radius: 1.5rem;
-}
-
-@media only screen and (min-width: 768px) {
-  .productImg {}
-
-  .cardImgWrapper {
-    align-self: center;
-  }
+  aspect-ratio: 1/1;
+  height: auto;
+  width: 100%;
 }
 
 .cardInfoWrapper {
   grid-area: info;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: all 0.2s ease-in-out 0s;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px)  {
   .cardInfoWrapper {
     text-align: left;
   }
+ 
 }
+
 
 .cardInfo {}
 
 .buttonsWrapper {
   display: flex;
   grid-area: button;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-top: $sp-xs;
 }
 

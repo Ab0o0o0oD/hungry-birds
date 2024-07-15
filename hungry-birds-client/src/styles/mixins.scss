@@ -1,3 +1,4 @@
+
 // media queries
 @mixin xs {
     @media only screen and (max-width: ($bp-xs - 1)) {
@@ -52,25 +53,15 @@
     @if $weight == normal {
         font-family: $font-regular;
 
-        @if $style == italic {
-            font-family: $font-regular-italic;
-        }
     }
 
     @if $weight == bold {
         font-family: $font-bold;
 
-        @if $style == italic {
-            font-family: $font-bold-italic;
-        }
     }
 
     @if $weight == light {
         font-family: $font-light;
-
-        @if $style == italic {
-            font-family: $font-thin-italic;
-        }
     }
 }
 
