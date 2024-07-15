@@ -38,8 +38,7 @@ export const MenyCard: React.FC<MenyCardProps> = ({
           <p>{product.allergier}</p>
           <p>{product.price} Kr</p>
         </div>
-      </div>
-      <div className={styles.buttonsWrapper}>
+        <div className={styles.buttonsWrapper}>
         {isProductInCart ? (
           <PlusMinusButton product={product} />
         ) : (
@@ -49,6 +48,7 @@ export const MenyCard: React.FC<MenyCardProps> = ({
             onClick={onClick}
           />
         )}
+      </div>
       </div>
     </div>
   );
