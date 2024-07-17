@@ -1,0 +1,24 @@
+.header {
+    position: relative;
+    height: 12em;
+    z-index: 3;
+  }
+  
+  .headerImg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logoWrapper {
+    display: flex;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+  }
+  
+  .logo {
+    margin: 20px;
+    width: 200px;
+  }
+  

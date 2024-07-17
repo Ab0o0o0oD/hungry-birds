@@ -1,0 +1,120 @@
+@import '@/styles/includes.scss';
+
+.container {
+    width: 100%;
+    padding: $sp-xl;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: $sp-xl;
+    color: $color-e-100;
+    background-color: $color-a-100;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 15px;
+}
+
+.receiptOrg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: $fs-l;
+    gap: 0.5rem;
+    margin-bottom: $sp-2xl;
+
+    p {
+        margin: 0;
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    font-size: $fs-xl;
+    align-items: center;
+}
+
+.receiptText {
+    font-size: $fs-l;
+}
+
+.receiptTextBod {
+    font-weight: 700;
+}
+
+.date {
+    display: flex;
+    gap: 1rem;
+}
+
+.listGroup {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: $border-radius-list;
+}
+
+.listGroupItem {
+    position: relative;
+    display: flex;
+    padding: $sp-m;
+    color: $color-e-100;
+    text-decoration: none;
+    background-color: $color-a-100;
+    border: 1px solid $color-a-75;
+    font-size: $fs-s;
+    justify-content: space-between;
+
+    &:first-child {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+    }
+
+    &:last-child {
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+    }
+
+    &:hover {
+        background-color: $color-a-75;
+    }
+}
+
+.receiptFooter {
+    font-size: $fs-2xl;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnContainer {
+    position: relative;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: $fs-xl;
+}
+
+.receiptHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.receiptLogo {
+    width: 15em;
+    height: auto;
+}
+
+@media only screen and (min-width: 778px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .listGroupItem {
+        font-size: $fs-l;
+    }
+}

@@ -14,18 +14,18 @@ $font-regular: $font-base;
 
 // Font sizes
 $fs-base: 16px;
-$fs-2xl: 1.75rem;         // 28px
-$fs-xl: 1.5rem;           // 24px
-$fs-xl-body: 1.3125rem;   // 21px
-$fs-l: 1.25rem;           // 20px
-$fs-l-body: 1.1875rem;    // 19px
-$fs-m: 1.125rem;          // 18px
-$fs-m-body: 1.0625rem;    // 17px
-$fs-s: 1rem;              // 16px
-$fs-s-body: .9375rem;     // 15px
-$fs-xs: .875rem;          // 14px
-$fs-xs-body: .8125rem;    // 13px
-$fs-2xs: .75rem;          // 12px
+$fs-2xl: 1.75rem; // 28px
+$fs-xl: 1.5rem; // 24px
+$fs-xl-body: 1.3125rem; // 21px
+$fs-l: 1.25rem; // 20px
+$fs-l-body: 1.1875rem; // 19px
+$fs-m: 1.125rem; // 18px
+$fs-m-body: 1.0625rem; // 17px
+$fs-s: 1rem; // 16px
+$fs-s-body: .9375rem; // 15px
+$fs-xs: .875rem; // 14px
+$fs-xs-body: .8125rem; // 13px
+$fs-2xs: .75rem; // 12px
 
 // Small font letter-spacing
 $ls: 0.03em;
@@ -41,3 +41,7 @@ $sp-xl: 32px;
 $sp-2xl: 48px;
 $sp-3xl: 64px;
 $sp-4xl: 72px;
+
+
+// border radius
+$border-radius-list: 1rem
