@@ -1,0 +1,29 @@
+:root {
+  --main-color: orangered;
+  --text-color: #fff;
+  --background-color: #1e1c1a;
+  --big-font: 5rem;
+  --h2-font: 2.25rem;
+  --p-font: 0.9rem;
+  user-select: none;
+}
+
+*::selection {
+  background: var(--main-color);
+  color: #fff;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--background-color);
+  background-size: cover;
+}
+
+.App {
+  text-align: center;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+

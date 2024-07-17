@@ -1,0 +1,24 @@
+@import '@/styles/typography.scss';
+html {
+  /*this is equal to 10px in root value which make it easier to calculate
+ https://www.freecodecamp.org/news/override-root-font-size-for-a-better-user-experience/
+ */
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-regular;
+  font-size: 1.6rem;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-size: 3.4rem;
+}
+h2 {
+}
+€ h3 {
+  font-size: 2.1rem;
+}

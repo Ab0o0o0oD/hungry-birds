@@ -1,23 +1,15 @@
 import React from 'react';
-import './App.css';
-import { MainPage } from './container/MainPage';
+import '@/styles/App.scss';
+import { MainPage } from './pages/MainPage';
 import { ItemProvider } from './state/ItemContext';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { Header } from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="header">
-        <img
-          className="header-img"
-          src="./assets/shawarmarull.jpg"
-          alt="header"
-        />
-        <div className="logo-wrapper">
-          <img className="logo" src="./assets/logo.PNG" alt="logo" />
-        </div>
-      </header>
+      <Header />
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <ItemProvider>
           <MainPage />

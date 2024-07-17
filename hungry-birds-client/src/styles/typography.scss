@@ -1,0 +1,86 @@
+@import '@/styles/includes.scss';
+@font-face {
+    font-family: 'Roboto-Reuglar';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto-light';
+    src: url('fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+h1 {
+    margin-top: pxToRem($sp-l);
+    margin-bottom: pxToRem($sp-l);
+    $scale: calc(1.1375rem + 2.22vw);
+    @include fs(#{$scale}, pxToRem(36));
+    line-height: 1.4;
+
+    &.big {
+        $scale: calc(.25rem + 6vw);
+        @include fs(#{$scale}, pxToRem(56));
+
+        @include sm {
+            line-height: 9vw;
+        }
+    }
+
+    @include md-down {
+        margin-top: 0;
+    }
+}
+
+h1,
+h2,
+.h2,
+h3,
+h4,
+b {
+    @include ff(bold);
+}
+
+h2,
+.h2,
+h3,
+h4 {
+    margin-top: pxToRem($sp-xl);
+    margin-bottom: pxToRem($sp-xs);
+}
+
+h2 + h3,
+h3 + h4 {
+    margin-top: pxToRem($sp-m);
+}
+
+i,
+em {
+    @include ff(normal);
+}
+
+h2,
+.h2 {
+    @include fs($fs-xl, $fs-2xl);
+}
+
+.large {
+    font-size: $fs-l;
+}
+
+a {
+    color: $c-links;
+}

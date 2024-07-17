@@ -1,0 +1,32 @@
+@import '@/styles/includes.scss';
+
+.checkoutBtnWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+  cursor: pointer;
+  z-index: 8;
+  background-color: $h-warning;
+  box-shadow: rgba(213, 140, 115, 0.1) 0 17px 12px -2px;
+  padding: $sp-s;
+  width: 100%;
+  border-radius: 0.75em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.cartIconWrapper {
+  display: flex;
+  flex-direction: row;
+}
+.orderNumbers {
+  height: 25px; // TODO change from px to em
+  width: 25px;
+  background-color: $color-a-100;
+  opacity: 0.9;
+  color: $color-e-100;
+  font-weight: 700;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: $sp-xs;
+}

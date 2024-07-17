@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react';
-import { CartItem, Product } from '../types';
 import {
   addToCart,
   updateTotalPrice,
@@ -7,6 +6,8 @@ import {
   deleteFromCart,
   incrementItem,
 } from './ActionsGenerator';
+import { Product } from '../type/product';
+import { CartItem } from '../type/cartItem';
 
 type Action =
   | { type: 'addToCart'; product: Product }
