@@ -1,9 +1,12 @@
+@use "sass:math";
 @import '@/styles/size.scss';
 
-// convert value (or pixel value) to rem
+
+
 @function stripUnit($value) {
-    @return $value / ($value * 0 + 1);
+    @return math.div($value, ($value * 0 + 1));
 }
+
 @function pxToRem($pxValue) {
-    @return #{stripUnit($pxValue) / stripUnit($fs-base)}rem;
+    @return #{math.div(stripUnit($pxValue), stripUnit($fs-base))}rem;
 }

@@ -1,0 +1,34 @@
+@import '@/styles/includes.scss';
+
+.loginWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-color: $color-a-100;
+}
+
+.loginContainer {
+    position: absolute;
+    background-color: $color-a-100;
+    color: $color-e-100;
+    max-width: 500px;
+    padding: $sp-l;
+    border-radius: $border-radius-card;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.loginHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: $sp-2xl;
+
+}
+
+.loginBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: $sp-2xl;
+}
