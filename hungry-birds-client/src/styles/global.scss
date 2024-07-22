@@ -1,24 +1,61 @@
 @import '@/styles/typography.scss';
+
 html {
   /*this is equal to 10px in root value which make it easier to calculate
  https://www.freecodecamp.org/news/override-root-font-size-for-a-better-user-experience/
  */
   font-size: 62.5%;
+  font-family: $font-regular;
 }
 
 body {
   margin: 0;
-  font-family: $font-regular;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: normal;
   letter-spacing: 0.05em;
+  line-height: 1.2;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.7rem;
+
+  }
+}
+
+h1,
+h2,
+.h2,
+h3,
+h4,
+b {
+  @include ff(bold);
+}
+
+h2,
+.h2,
+h3,
+h4 {
+  margin-top: pxToRem($sp-l);
+  margin-bottom: pxToRem($sp-l);
+}
+
+h2+h3,
+h3+h4 {
+  margin-top: pxToRem($sp-m);
 }
 
 h1 {
   font-size: 3.4rem;
 }
-h2 {
+
+h2,
+.h2 {
+  @include fs($fs-l, $fs-xl);
 }
-€ h3 {
-  font-size: 2.1rem;
+
+h3 {
+  @include fs($fs-m, $fs-l)
+}
+
+p {
+  margin: 0.25em 0;
 }
