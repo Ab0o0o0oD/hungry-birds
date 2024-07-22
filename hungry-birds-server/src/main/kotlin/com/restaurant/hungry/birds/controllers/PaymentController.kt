@@ -5,6 +5,7 @@ import com.restaurant.hungry.birds.domain.CreateVippsPaymentResponse
 import com.restaurant.hungry.birds.domain.dto.CreateVippsPaymentDto
 import com.restaurant.hungry.birds.domain.dto.CreateVippsPaymentResponseDto
 import com.restaurant.hungry.birds.services.PaymentService
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
@@ -17,16 +18,23 @@ class PaymentController(
 ) {
 
     @PostMapping("/create-payment")
+    @CrossOrigin(origins = ["http://localhost:3000"])
     fun createPayment(
         @RequestBody createVippsPayment: CreateVippsPaymentDto,
-    ): CreateVippsPaymentResponseDto =
-        paymentService.createPayment(createVippsPayment.toDomain()).toDto()
+    ): CreateVippsPaymentResponse =
+        paymentService.createPayment(
+            CreateVippsPayment(
+                value = 500,
+                phoneNumber = 4790738410,
+                returnUrl = "https://www.google.com/",
+                paymentDescription = "asd",
+            ),
+        )
 }
 
 fun CreateVippsPaymentDto.toDomain() = CreateVippsPayment(
     value = this.value,
     phoneNumber = this.phoneNumber,
-    reference = this.reference,
     returnUrl = this.returnUrl,
     paymentDescription = this.paymentDescription,
 )

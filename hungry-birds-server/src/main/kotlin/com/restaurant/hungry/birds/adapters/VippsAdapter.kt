@@ -16,6 +16,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
+import java.util.UUID
 
 @Service
 class VippsAdapter(
@@ -58,7 +59,7 @@ class VippsAdapter(
         customer = CustomerDto(
             phoneNumber = this.phoneNumber,
         ),
-        reference = this.reference,
+        reference = UUID.randomUUID().toString(),
         userFlow = "WEB_REDIRECT",
         returnUrl = this.returnUrl,
         paymentDescription = this.paymentDescription,
