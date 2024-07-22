@@ -19,6 +19,7 @@ export const PlusMinusButton: React.FC<PlusMinusButtonProps> = ({
         <button
           className={styles.minusButton}
           onClick={() => dispatch({ type: 'decrement', product: product })}
+          type="button"
         >
           <span className="minus">-</span>
         </button>
@@ -32,6 +33,7 @@ export const PlusMinusButton: React.FC<PlusMinusButtonProps> = ({
         <button
           className={styles.plusButton}
           onClick={() => dispatch({ type: 'increment', product: product })}
+          type="button"
         >
           +
         </button>

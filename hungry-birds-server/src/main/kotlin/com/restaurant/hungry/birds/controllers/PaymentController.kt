@@ -24,17 +24,17 @@ class PaymentController(
     ): CreateVippsPaymentResponse =
         paymentService.createPayment(
             CreateVippsPayment(
-                value = 500,
-                phoneNumber = 4790738410,
-                returnUrl = "https://www.google.com/",
-                paymentDescription = "asd",
+                value = createVippsPayment.value,
+                phoneNumber = createVippsPayment.phoneNumber.toLong(),
+                returnUrl = createVippsPayment.returnUrl,
+                paymentDescription = createVippsPayment.returnUrl,
             ),
         )
 }
 
 fun CreateVippsPaymentDto.toDomain() = CreateVippsPayment(
     value = this.value,
-    phoneNumber = this.phoneNumber,
+    phoneNumber = this.phoneNumber.toLong(),
     returnUrl = this.returnUrl,
     paymentDescription = this.paymentDescription,
 )

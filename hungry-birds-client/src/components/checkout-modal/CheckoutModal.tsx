@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactModal from 'react-modal';
-import { useItem } from '../../state/ItemContext';
+import { useItem } from '@/state/ItemContext';
 import styles from './checkout-modal.module.scss';
 import { AiOutlineClose } from 'react-icons/ai';
 import { CartItemComponent } from '../card-item/CartItem';
@@ -8,11 +8,11 @@ import { RxLapTimer } from 'react-icons/rx';
 import { renderTimeViewClock, TimePicker } from '@mui/x-date-pickers';
 import { TfiCommentsSmiley } from 'react-icons/tfi';
 import { TextField } from '@mui/material';
-import { Formik } from 'formik';
+import {Formik} from 'formik';
 import { PaymentParams } from '@/type/paymentParams';
-import {createPayment} from "../api";
 import {BeatLoader} from "react-spinners";
 import { TitleWithIcon } from '../title-with-icon/TitleWithIcon';
+import {createPayment} from "@/network/api";
 
 interface CheckoutModalProps {
   isOpenCheckoutModal: boolean;
@@ -56,8 +56,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
           {(props) => {
             const { values, handleSubmit, handleChange,isSubmitting } = props;
             if(isSubmitting){
-              return <div className={styles.spinnerWrapper}><BeatLoader size={30} color={'#ff5b24'} className={styles.submitSpinner}/></div>}
-            else
+              return <div className={styles.spinnerWrapper}><BeatLoader size={30} color={'#ff5b24'} className={styles.submitSpinner}/></div>
+            }
+
             return (
               <form onSubmit={handleSubmit}>
                 <section className={styles.header}>
@@ -86,6 +87,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                       <div className={styles.orderSettingsBtnsWrapper}>
                         <button
                           name="pickUpTime"
+                          type="button"
                           className={`${
                             selectedFastest
                               ? styles.fastestBtnSelected
@@ -152,7 +154,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   </section>
 
                   <section className={styles.paymentMethodSection}>
-                    <button className={styles.payWithVippsBtn}>
+                    <button className={styles.payWithVippsBtn} type={'submit'}>
                       Betal med
                       <img
                         className={styles.logoWrapper}

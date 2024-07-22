@@ -5,8 +5,8 @@ export const createPayment = (paymentParams: PaymentParams) => {
   axios
     .post('http://localhost:8080/api/create-payment',{
       value: paymentParams.totalPrice * 100,
-      phoneNumber: 4790738410, //TODO MY number not working!!! but this works! because it's only allowed in test
-      returnUrl: 'www.google.com',
+      phoneNumber: "4790738410", //this only allowed in test
+      returnUrl: 'http://localhost:3000/receipt',
       paymentDescription: paymentParams.paymentDescription,
     })
     .then(function (response) {
