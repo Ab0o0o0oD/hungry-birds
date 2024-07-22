@@ -21,7 +21,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 }: CheckoutModalProps) => {
   const { state } = useItem();
   const customStyle = {
-    content: { color: 'black', padding: '0'},
+    content: { color: 'black', padding: '0' },
   };
   const [clock, setClock] = useState<Date | null>(null);
 
@@ -62,11 +62,10 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               />
               <div className={styles.orderSettingsBtnsWrapper}>
                 <button
-                  className={`${
-                    selectedFastest
+                  className={`${selectedFastest
                       ? styles.fastestBtnSelected
                       : styles.fastestBtn
-                  }`}
+                    }`}
                   onClick={() => {
                     setClock(null);
                     setselectedFastest(true);
@@ -79,11 +78,10 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   disablePast={true}
                   closeOnSelect={true}
 
-                  className={`${
-                    clock === null
+                  className={`${clock === null
                       ? styles.timePickerBtn
                       : styles.timePickerBtnSelected
-                  }`}
+                    }`}
                   value={clock}
                   onChange={(e) => {
                     setselectedFastest(false);
@@ -118,7 +116,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
           <section className={styles.paymentMethodSection}>
             <button className={styles.payWithVippsBtn}>
-              Betal med
+              <span>Betal med</span>
               <img
                 className={styles.logoWrapper}
                 src="./assets/Vipps-logo-wrapper.svg"
