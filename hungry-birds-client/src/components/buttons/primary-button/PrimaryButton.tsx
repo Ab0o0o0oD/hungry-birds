@@ -17,6 +17,7 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
       <button
         className={`${styles.btn} ${styles[color]}`}
         onClick={(e) => onClick(e)}
+        type="button"
       >
         {text}
       </button>

@@ -1,8 +1,8 @@
 #Encryption https://medium.com/javarevisited/how-to-encrypt-secrets-in-an-spring-boot-application-57a60c8abaa7 aSF2Adf4VaWrerTRfASLaSF2Adf4VaWrerTRfASL
 jasypt:
   encryptor:
-    password: ${JASYPT_ENCRYPTOR_PASSWORD:}
-    skip-property-sources: org.springframework.boot.env.RandomValuePropertySource
+    password: 'aSF2Adf4VaWrerTRfASLaSF2Adf4VaWrerTRfASL'
+
 
 vipps:
   url: 'https://apitest.vipps.no'
