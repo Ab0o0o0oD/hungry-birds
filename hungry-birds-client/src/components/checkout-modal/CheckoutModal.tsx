@@ -31,7 +31,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
     totalPrice: state.totalPrice,
   };
   const customStyle = {
-    content: { color: 'black', padding: '0'},
+    content: { color: 'black', padding: '0' },
   };
   const [clock, setClock] = useState<Date | null>(null);
   const [selectedFastest, setselectedFastest] = useState<boolean>(true);
